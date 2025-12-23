@@ -4,47 +4,52 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chris Board — Login</title>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="bg">
-    <div class="shell">
-
-      <!-- Left banner (desktop only) -->
-      <section class="hero">
-        <img src="assets/banner.png" alt="Chris Board banner" />
-        <div class="hero-copy">
-          <h2>Internal Portal</h2>
-          <p>
-            Sign in to manage operations, orders, and internal workflows.
-          </p>
+    <section class="login">
+      <div class="top">
+        <img class="logo" src="assets/brand.png" alt="Chris Board logo" />
+        <div class="brandline">
+          <div class="brandname">CHRIS BOARD</div>
+          <div class="tagline">PAPERBOARD RESELLER</div>
         </div>
-      </section>
+      </div>
 
-      <!-- Login card -->
-      <section class="card">
-        <div class="brand">
-          <img src="assets/brand.png" alt="Chris Board logo" />
-          <div class="brand-text">
-            <strong>CHRIS BOARD</strong>
-            <span>PAPERBOARD RESELLER</span>
-          </div>
-        </div>
-
+      <div class="card">
         <h1>Sign in</h1>
 
-        <form class="login-form">
-          <label>
-            <span>Username</span>
-            <input type="text" placeholder="Username" />
+        <div class="panel">
+          <label class="field">
+            <span class="label">
+              <span class="icon" aria-hidden="true">
+                <!-- user icon -->
+                <svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-4.1 0-7.5 2.1-7.5 4.8V20h15v-.2c0-2.7-3.4-5.8-7.5-5.8Z"/></svg>
+              </span>
+              Username
+            </span>
+            <input type="text" placeholder="username" autocomplete="username" />
           </label>
 
-          <label>
-            <span>Password</span>
-            <div class="password-wrap">
-              <input type="password" placeholder="••••••••" />
-              <span class="eye">👁</span>
+          <label class="field">
+            <span class="label">
+              <span class="icon" aria-hidden="true">
+                <!-- lock icon -->
+                <svg viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2ZM10 7a2 2 0 0 1 4 0v2h-4Z"/></svg>
+              </span>
+              Password
+            </span>
+
+            <div class="pw">
+              <input id="pw" type="password" placeholder="••••••••" autocomplete="current-password" />
+              <button class="eye" type="button" aria-label="Show password" onclick="
+                const i=document.getElementById('pw');
+                i.type = i.type==='password' ? 'text':'password';
+              ">
+                <!-- eye icon -->
+                <svg viewBox="0 0 24 24"><path d="M12 5c5.5 0 9.7 5.1 10 6-.3.9-4.5 6-10 6S2.3 11.9 2 11c.3-.9 4.5-6 10-6Zm0 2C7.8 7 4.4 10.4 4 11c.4.6 3.8 4 8 4s7.6-3.4 8-4c-.4-.6-3.8-4-8-4Zm0 1.5A2.5 2.5 0 1 1 9.5 11 2.5 2.5 0 0 1 12 8.5Z"/></svg>
+              </button>
             </div>
           </label>
 
@@ -53,20 +58,17 @@
             Remember me
           </label>
 
-          <button type="submit">Log in</button>
-        </form>
+          <button class="primary" type="submit">Log in</button>
+        </div>
 
         <p class="help">
           Don’t have access? Can’t sign in?<br />
           Please contact your admin.
         </p>
+      </div>
 
-        <p class="copyright">
-          © 2025 Chris Board
-        </p>
-      </section>
-
-    </div>
+      <p class="copyright">© 2025 Chris Board</p>
+    </section>
   </main>
 </body>
 </html>
